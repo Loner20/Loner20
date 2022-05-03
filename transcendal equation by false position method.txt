@@ -1,0 +1,55 @@
+Solution of algebraic and transcendental equation
+
+2b) Program to solve algebraic and transcendental equation by false position method.
+
+CODE
+
+funcprot(0)
+
+function []=rf(f_expr, xl, xu)
+
+x=xl
+
+fxl=evstr(f_expr)
+
+x=xu
+
+fxu=evstr(f_expr)
+
+if(fxl*fxu)>0 then
+
+printf("\nWrong Interval")
+
+abort
+
+end
+
+for i=1:7
+
+xnew=(fxu*xl-fxl*xu)/(fxu-fxl)
+
+printf("\nIntermediate roots=%f",xnew)
+
+x=xnew
+
+fxnew=evstr(f_expr)
+
+if(fxnew<0) then
+
+xl=xnew
+
+fxl=fxnew
+
+else
+
+xu=xnew
+
+fxu=fxnew
+
+end
+
+end
+
+printf("\nRoot using False Position Method=%f",xnew)
+
+endfunction

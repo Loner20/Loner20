@@ -1,0 +1,22 @@
+{3}	INTERPOLATION
+
+
+LAGRANGE'S INTERPOLATION 
+
+CODE:-
+
+x=[19 39 49 69 99]
+y=[51 104 158 318 245]
+a=79
+s=1
+for i=1:4
+    p=1
+    for j=1:4
+        if(i<>j)
+            p=p*((a-x(j))/(x(i)-x(j)))
+     end
+    end
+    t=p*y(i)
+    s=s+t
+   end
+   printf("y(%i)is %g",a,s)

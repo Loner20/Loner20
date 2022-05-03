@@ -1,0 +1,51 @@
+Numercal Integration
+
+c. Program for numerical integration using Simpson’s 3/8th rule.
+
+Codes:
+
+deff('y=f(x)','y=x^4')
+
+a = -3
+
+b= 3
+
+n = 12
+
+h = (b-a)/n
+
+s1=0
+
+s2=0
+
+s3=0
+
+x=a
+
+for i=0:n
+
+y= f(x)
+
+if (i==0| i==n)
+
+s1=s1+y
+
+else if (modulo(i,3)==0)
+
+s2=s2+y
+
+else
+
+s3=s3+y
+
+end
+
+end
+
+x=x+h
+
+end
+
+s=((3*h)/8)*(s1+(2*s2)+(3*s3))
+
+printf("integration of given f(x) = %g",s

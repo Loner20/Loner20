@@ -1,0 +1,49 @@
+Solution of algebraic and transcendental equation
+
+2c) Program to solve algebraic and transcendental equation by Secant method.
+
+CODE
+
+funcprot(0)
+
+function []=secant(f_expr, x0, x1)
+
+x=x0
+
+fx0=evstr(f_expr)
+
+x=x1
+
+fx1=evstr(f_expr)
+
+if(fx1*fx0)>0 then
+
+printf("\nWrong Interval")
+
+abort
+
+end
+
+for i=1:10
+
+x2=(fx1*x0-fx0*x1)/(fx1-fx0)
+
+printf("\nIntermediate roots=%f",x2)
+
+x0=x1
+
+x=x0
+
+fx0=evstr(f_expr)
+
+x1=x2
+
+x=x1
+
+fx1=evstr(f_expr)
+
+end
+
+printf("\nRoot using Secant Method=%f",x2)
+
+endfunction

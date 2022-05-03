@@ -1,0 +1,28 @@
+
+CODES:
+
+x=[0 1 2 3 4]
+y=[12 19 29 37 45]
+n=length(x)
+xsum=0
+ysum=0
+x2sum=0
+xysum=0
+for i=1:n
+    xsum=xsum+x(i)
+    ysum=ysum+y(i)
+    xysum=xysum+x(i)*y(i)
+    x2sum=x2sum+x(i)*x(i)
+end
+d=[n xsum ;xsum x2sum]
+k=[ysum;xysum]
+g=d\k
+a=g(1)
+b=g(2)
+printf("y=%fx+%f",a,b);
+
+
+
+
+
+

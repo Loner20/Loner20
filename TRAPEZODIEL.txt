@@ -1,0 +1,44 @@
+Numercal Integration
+
+
+a. Program for numerical integration using Trapezoidal rule.
+
+Codes:
+
+deff('y=f(x)','y=x^4')
+
+a = -3
+
+b= 3
+
+n = 12
+
+h = (b-a)/n
+
+s1=0
+
+s2=0
+
+x=a
+
+for i=0:n
+
+y=f(x)
+
+if (i==0| i==n)
+
+s1=s1+y
+
+else
+
+s2=s2+y
+
+end
+
+x=x+h
+
+end
+
+t = (h/2)*(s1+2*s2)
+
+printf("integration of given f(x) = %g",t)
